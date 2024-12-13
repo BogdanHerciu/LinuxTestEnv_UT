@@ -1,3 +1,9 @@
+# add.py
+def add(x, y):
+    return x + y
+
+
+
 def test_1():
     # Test if add(1, 2) returns 3
     result = add(1, 2)
