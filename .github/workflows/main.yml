@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # You can keep this, or switch to another runner if needed
+    runs-on: ubuntu-latest  # Or ubuntu-24.04 if you want to test that version
 
     steps:
       - name: Checkout code
@@ -19,6 +19,22 @@ jobs:
       - name: Set up Python 3.12
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12'  # Use Python 3.12.3
+          python-version: '3.12'
 
-      - name: Install depe
+      # Cache dependencies to speed up future runs
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: |
+          pytest
