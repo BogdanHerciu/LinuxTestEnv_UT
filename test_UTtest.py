@@ -22,4 +22,4 @@ def test_3():
 def test_4():
     # Test if add(100, 200) returns 300
     result = add(100, 200)
-    assert result == 400, f"Expected 300, but got {result}"
+    assert result == 300, f"Expected 300, but got {result}"
