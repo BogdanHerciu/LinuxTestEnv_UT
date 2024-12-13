@@ -18,7 +18,3 @@ def UT_test_2_sum_of_two_integers():
     result = main_file.sum_of_two_integers(5,6)
     assert result == 11, f"Expected 3, but got {result}"
     print("TC02 ended")
-
-
-UT_test_1_func_1()
-UT_test_2_sum_of_two_integers()
