@@ -1,5 +1,6 @@
  
-
+def add(a,b):
+    return a+b
 
 def test_1():
     # Test if add(1, 2) returns 3
