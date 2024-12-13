@@ -1,4 +1,3 @@
- 
 def add(a,b):
     return a+b
 
@@ -11,5 +10,3 @@ def UT_test_2_sum_of_two_integers():
     # Test if add(-1, 1) returns 0
     result = add(-1, 1)
     assert result == 0, f"Expected 0, but got {result}"
-
- 
