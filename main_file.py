@@ -11,5 +11,7 @@ def sum_of_two_integers(a,b):
 	''' This function returns the sum of a and b'''
 	return a+b
 
-print(func_1())
-print(sum_of_two_integers(6,8))
+# Protect executable code with this block
+if __name__ == "__main__":
+    print(func_1())
+    print(sum_of_two_integers(6, 8))
