@@ -7,9 +7,9 @@ Test function        : func_1
 '''
 def test_1():
     for crtIdx in range(1000):
-        result = func_1()
+        result = main_file.func_1()
         assert (9 <= result <= 28), "Error: function returns values out of bounds"
-
+    print("End of Test Case 1")    
 '''
 Test Case Description: Testing sum_of_two_integers
 Test function        : sum_of_two_integers
